@@ -21,10 +21,26 @@ function changeShape()
 {
     var w = document.getElementById("width").value;
     var h = document.getElementById("height").value;
+    var r = document.getElementById("radius").value;
+    var squares1 = getElementsByClassName("square1");
 
     var box2 = document.getElementById("box2");
     box2.style.width = w;
     box2.style.height = h;
+
+    for(var i=0; i<squares1.length;i++)
+    {
+        squares1[i].style.borderRadius = r;
+
+    }
+}
+
+function changeColor()
+{
+    var c = document.getElementById("color").value;
+    
+    var box2 = document.getElementById("box2");
+    box2.style.backgroundColor = c; 
 }
 
 function changeLinkContent()
@@ -52,6 +68,26 @@ function changeSq()
     }
 }
 
+function changeSquares()
+{
+    var squares1 = document.getElementsByClassName("square1"); 
+    var squares2 = document.getElementsByClassName("square2");
+    for(var i=0; i<squares1.length;i++)
+    {
+        squares1[i].style.backgroundColor = "black";
+        squares1[i].style.borderRadius = "50px";
+        squares1[i].style.boxShadow = "2px 2px 2px grey";
+
+    }
+    for(var i=0; i<squares2.length;i++)
+    {
+        squares2[i].style.backgroundColor = "white";
+        squares2[i].style.borderRadius = "50px";
+        squares2[i].style.boxShadow = "2px 2px 2px grey";
+
+    }
+}
+
 function createSq(){
 
     var parent = document.getElementById("parentSq");
@@ -65,13 +101,19 @@ function createSq(){
 
 function createLink(){
     // var a = document.getElementById("parentSq");
+    var parent = document.getElementById("parentLink");
     var a = document.createElement("a");
-    var link = document.createTextNode("This is link"
-    )
-    a.appendChild(link);//add a class to the divs
+    var link = document.createTextNode(" This is a separate link")
+    a.appendChild(link);
     a.title = "Created Link";
     a.href = "http://www.tri-c.edu";
-    document.body.appendChild(a);
+   parent.appendChild(a);
+}
+
+function removeLink(){
+    var parent = document.getElementById("parentLink");
+    var child = parent.lastElementChild;
+    parent.removeChild(child);
 }
 
 function removeSq()

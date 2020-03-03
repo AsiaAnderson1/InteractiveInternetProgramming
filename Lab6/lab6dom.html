@@ -18,24 +18,33 @@
             <label>Enter width  ex: 300px</label><input type="text" id="width"/>            
             <label>Enter height ex: 300px</label><input type="text" id="height"/>        
             <button id="btn2" class="btnOrig" onclick="changeShape()">Change Shape</button> 
+            <label>Input color:</label>  <input type="text" id="color"/>
+            <button id="btn9" class="btnOrig" onclick="changeColor()">Change Color</button>           
             <div id="box2" class="box">box2</div>            
         </div>
-        <div  class="wrapper">
+        <div id="parentLink" class="wrapper">
             <label>Enter a website address ex:"http://www.google.com"</label>
             <input type="text" id="linkContent1"/> 
             <button  id="btn3" class="btnOrig" onclick="changeLinkContent()">Change Link</button>   
-            <a id="link1" href="http://www.google.com">Click here</a> 
+            <a id="link1" href="http://www.google.com">Click here</a>  
+            <br></br>
+            <button id="btn7" class="btnOrig" onclick="createLink()">Create Link</button> 
+            <button id="btn8" class="btnOrig" onclick="removeLink()">Remove Link</button>           
+
         </div>
         <div id="parentSq" class="wrapper">
-            <div class="square">1</div>           
-            <div class="square">2</div>           
-            <div class="square">3</div>           
-            <div class="square">4</div>  
+            <div class="square1">1</div>           
+            <div class="square1">2</div>           
+            <div class="square2">3</div>           
+            <div class="square2">4</div>  
             <div class="clear">
                 <button id="btn4" class="btnOrig" onclick="changeSq()">Click me</button>   
                 <button id="btn5" class="btnOrig"onclick="createSq()">Create</button>
                 <button id="btn6" class="btnOrig" onclick="removeSq()">Remove</button> 
-                <button id="btn7" class="btnOrig" onclick="createLink()">Create Link</button>           
+                <button id="btn10" class="btnOrig" onclick="changeSquares()">Change Squares</button>    
+                <label>Enter Radius:</label><input type="text" id="radius"/>         
+            <button id="btn11" class="btnOrig" onclick="changeShape()">Change Shape</button>        
+
             </div>            
         </div>      
     </body>
