@@ -20,19 +20,13 @@ function changeSize()
 function changeShape()
 {
     var w = document.getElementById("width").value;
-    var h = document.getElementById("height").value;
-    var r = document.getElementById("radius").value;
-    var squares1 = getElementsByClassName("square1");
+    var h = document.getElementById("height").value;;
+    
 
     var box2 = document.getElementById("box2");
     box2.style.width = w;
     box2.style.height = h;
 
-    for(var i=0; i<squares1.length;i++)
-    {
-        squares1[i].style.borderRadius = r;
-
-    }
 }
 
 function changeColor()
