@@ -24,7 +24,7 @@ $(function(){
     });
 
     $(".wrapperDiv").hover(function(){
-        $(".wrapperDiv").remove();
+       // $(".wrapperDiv").remove();
         $("#wrapper").addClass("wrapperDiv");
         $("#1").text("1");
         $("#2").text("2");
