@@ -23,9 +23,8 @@ $(function(){
         $("#4").css({"background-color" : "white", "color" : "black"});
     });
 
-    $(".wrapperDiv").hover(function(){
-        $(".wrapperDiv").remove();
-        $("#wrapper").addClass("wrapperDiv");
+     $("#wrapper").hover(function(){
+     $(".wrapperDiv").removeAttr("style");
         $("#1").text("1");
         $("#2").text("2");
         $("#3").text("3");
@@ -33,10 +32,11 @@ $(function(){
         $("#4").css("background-color","yellow");
       
     });
+      
 
-    $(".wrapperDiv").mouseout(function(){
-        $("#wrapper").addClass("wrapperDiv");
-        
-      });
+  $("#wrapper").mouseout(function(){
+    $(".wrapperDiv").removeAttr("style");
+
+     });
 
 });
